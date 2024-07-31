@@ -4,8 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  
+<body class="d-flex align-items-center">
+  <div class="container border py-3 rounded">
+    
+    <!--Header of form-->
+    <div class="header text-center">
+      <h2 class="text-white fw-bold">Signup</h2>
+    </div>
+
+    <!--main content of form-->
+    <div class="main mx-3 my-3">
+        <form action="#">
+          <div class="mb-3">
+            <label for="fullName" class="d-block">Full Name</label>
+            <input type="text" name="fullName" id="fullName" class="w-100 rounded p-1 ps-2 border-1" placeholder="Type name here" required>
+            <p class="text-danger m-0 js-name"></p>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="d-block">Email</label>
+            <input type="text" name="email" id="email" class="w-100 rounded p-1 ps-2 border-1" placeholder="abc@gmail.com" required>
+            <p class="text-danger m-0 textReq" style="--i: 0">Email is required!</p>
+          </div>
+          <div >
+            <label for="password" class="d-b2345678lock">Password</label>
+            <input type="password" name="password" id="password" class="w-100 rounded p-1 border-1 ps-2" placeholder="At least 8 characters" min="8" max="20" required>
+            <p class="text-danger textReq" style="--i: 0">Password is required!</p>
+          </div>
+          <input type="submit" value="Create Account" class="w-100 rounded p-1 border-0 create-account-btn js-create-account-btn">
+        </div>
+      </form>
+
+    <!--footer of form-->
+    <div class="footer">
+      <p class="text-center">Already have an account?
+        <a href="#" class="text-white text-decoration-none login-form">Login</a></p>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
